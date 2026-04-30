@@ -1,15 +1,11 @@
 {
-  "version": 2,
-  "buildCommand": "pnpm build",
-  "devCommand": "pnpm dev",
-  "installCommand": "pnpm install",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/public",
   "framework": "vite",
-  "outputDirectory": "dist",
-  "public": true,
-  "regions": ["sin1"],
-  "git": {
-    "deploymentEnabled": {
-      "main": true
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
-  }
+  ]
 }
